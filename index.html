@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="spec2.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(194, 129, 140), rgb(127, 207, 127), rgb(134, 134, 221));
+   
+}
+.container{
+    width: 300px;
+    justify-content: center;
+    transition: all 0.3 ease;
+    position: absolute;
+    top: 110px;
+    left: 350px;
+
+}
+img:first-child{
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+}
+img:last-child{
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 100px;
+    right: 0;
+    margin: auto;
+    transform: translate(0, -25%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+    
+}
+.container:hover img:first-child{
+    transform: perspective(400px)
+    rotateX(55deg)
+    translateY(-5%)
+    rotateZ(0);
+    box-shadow: 0px 30px 400px 4px rgba(255, 255, 255, 0.479);
+    height: 500px;
+    width: 500px;
+   
+    
+}
+.container:hover img:last-child{
+    opacity: 1;
+    top: 0;
+    object-fit: contain;
+    height: 500px;
+    width: 500px;
+    mix-blend-mode: multiply;
+   
+   
+}
+
+#set{
+    font-family: "Anta", sans-serif;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    animation-name: set;
+   animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+
+
+}
+@keyframes set{
+    from{
+        width: 10%;
+        background-color: rgb(146, 96, 192);
+    }
+    to{
+        width: 100%;
+        background-color: rgb(234, 85, 85);
+    }
+}
+#det{
+    position: absolute;
+    bottom: 0;
+    left: 530px;
+    font-size: small;
+}
+#instruction{
+    position: absolute;
+    bottom: 5%;
+    left: 36%;
+    font-size:x-large;
+    font-family: "Anta", sans-serif;
+}
+   
+
+        
+
+       
+    </style>
+</head>
+<body>
+    <span id="set">Hey Shreya , Welcome To My Website</span>
+    <span id="instruction">Please hover On a Image</span>
+    <div class="container">
+        <img src="png1.jpg" >
+        <img src="png1-removebg.png" >
+
+        
+
+        </div>
+        <span id="det">Presented By JEET</span>
+    
+</body>
+</html>
